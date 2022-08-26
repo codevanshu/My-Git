@@ -1,4 +1,3 @@
-
 #2 Take three values from user and find the greatest number from them.
 x = int(input(" Enter value : "))
 y = int(input(" Enter value : "))
@@ -11,3 +10,5 @@ elif y > x and y > z:
 else:
     largest = z
 print(" largest number is", largest)
+
+print("Byy")
