@@ -1,7 +1,4 @@
 
-from re import A, X
-
-
 # Make Calculator Using Function Method
 
 def calc(x,y):
@@ -14,7 +11,7 @@ def calc(x,y):
 print("Calcuator")
 a  = int(input("Enter The value : "))
 b  = int(input("Enter The Value : "))
-print(calc())
+print(calc(a,b))
 
 
 
