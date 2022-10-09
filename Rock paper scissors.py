@@ -2,11 +2,11 @@
  # Game :-- Rock Paper Scissor         
 
 
-def MesDis():
+def MesDis(): #this function display title
         print()
         return "|Winning Rules Of The Rock Paper Scissor Game As Follows:| \n"+"|Rock vs Paper ->    Paper Wins                          |\n"+"|Rock vs Scissor ->  Rock Wins                           | \n"+"|Paper vs Scissor -> Scissor Wins                        | \n"
        
-def userchoice():
+def userchoice(): # user choose value in the funtion
         print ("Enter choice \n 1.  Rock \n 2.  Paper  \n 3.  Scissor \n")
         f = int(input("First  User Turn:  "))
         s = int(input("Second User Turn:  "))
