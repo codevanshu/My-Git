@@ -1,0 +1,76 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.Title{
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: center;
+    height: 500px;
+    align-items: center;
+
+}
+.Title h1{
+    font-size: 40px ;
+    color: linear-gradient(to left bottom, #051337, #1e0d2c, #260920, #280a16, #250c0c);
+}
+.Title p {
+    font-size: 20px;
+    padding: 20px;
+}
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to left bottom, #051337, #1e0d2c, #260920, #280a16, #250c0c);
+    
+
+}
+.Calculator{
+    padding: 15px;
+    box-shadow: 2px 2px 20px 0px rgb(255, 255, 255);
+    border-radius: 20px;
+   
+}
+    
+input#display{
+    
+    width: 350px;
+    height: 100px;
+    background: transparent;
+    color: white;
+    font-size: 50px;
+    border: none;
+    caret-color: transparent;
+    
+}
+
+::placeholder{
+    color: rgba(255, 255, 255, 0.556);
+}
+.buttons {
+    align-items: center;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 370px;
+    height: 420px;
+}
+button{
+    border-radius: 100px;
+    height: 70px;
+    background-color: grey;
+    box-shadow: 1px 1px 76px 0px rgba(0,0,0,0.75);
+    cursor: pointer;
+    font-size: 30px;
+    border: none;
+    color: white;
+}
