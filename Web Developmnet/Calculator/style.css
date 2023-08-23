@@ -4,6 +4,7 @@
     padding: 0px;
     box-sizing: border-box;
     text-align: center;
+    align-items: center;
 }
 
 .Title{
@@ -11,7 +12,7 @@
     flex-flow: column wrap;
     align-content: center;
     justify-content: center;
-    height: 500px;
+    height: 700px;
     align-items: center;
 
 }
@@ -33,22 +34,40 @@
     
 
 }
-.Calculator{
-    padding: 15px;
+div.Calculator{
+    padding: 20px;
     box-shadow: 2px 2px 20px 0px rgb(255, 255, 255);
     border-radius: 20px;
    
 }
-    
-input#display{
-    
+span{
     width: 350px;
-    height: 100px;
+    height: 50px;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
     background: transparent;
     color: white;
-    font-size: 50px;
+    text-align: right;
+    font-size: 20px;
+    margin-left: 10px;
+} 
+input#display:focus {
+    outline: none;
+}
+
+input#display{
+    width: 350px;
+    height: 50px;
+    display: grid;
+    grid-template-columns:1fr;
+    background: transparent;
+    color: white;
+    font-size: 30px;
     border: none;
+    margin-left: 10px;
     caret-color: transparent;
+    text-align: end;
     
 }
 
@@ -61,16 +80,58 @@ input#display{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    width: 370px;
-    height: 420px;
+    width: 450px;
+    height: 500px;
 }
 button{
+    cursor: pointer;
     border-radius: 100px;
-    height: 70px;
-    background-color: grey;
+    height: 79px;
+    background-color: rgb(75, 74, 74);
     box-shadow: 1px 1px 76px 0px rgba(0,0,0,0.75);
     cursor: pointer;
     font-size: 30px;
+    width: 80px;
     border: none;
     color: white;
+    text-align: center;
+}
+button{
+    align-items: center;
+    margin: 3px;
+}
+#button-divide {
+    background-color: #fe9505;
+
+}
+#button-x {
+    background-color: #fe9505;
+
+}
+#button-- {
+    background-color: #fe9505;
+
+}
+#button-add {
+    background-color: #fe9505;
+
+}
+#button-equal {
+    background-color: #fe9505;
+
+}
+#button-AC {
+    background-color: rgb(164, 162, 162);
+    color: black;
+
+}
+#button-C {
+    background-color: rgb(164, 162, 162);
+    color: black;
+
+}
+#button-percent {
+    background-color: rgb(164, 162, 162);
+    color: black;
+
 }
