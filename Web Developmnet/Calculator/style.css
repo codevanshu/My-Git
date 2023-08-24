@@ -26,7 +26,8 @@
 }
 .main{
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    padding: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,12 +38,14 @@
 div.Calculator{
     padding: 20px;
     box-shadow: 2px 2px 20px 0px rgb(255, 255, 255);
-    border-radius: 20px;
+    border-radius: 0px 20px 20px 0px;
+    display: inline;
+    align-items: center;
    
 }
 span{
     width: 350px;
-    height: 50px;
+    height: 30px;
     color: white;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -83,7 +86,7 @@ input#display{
     width: 450px;
     height: 500px;
 }
-button{
+.calc-button{
     cursor: pointer;
     border-radius: 100px;
     height: 79px;
@@ -135,3 +138,45 @@ button{
     color: black;
 
 }
+div.history {
+    display:flex ;
+    justify-content: center;
+    align-items: first baseline;
+    width: 200px;
+    height: 88vh;
+    border-radius: 20px 0px 0px 20px;
+    margin: 20px;
+    box-shadow: 2px 2px 20px 0px rgb(255, 255, 255);
+    
+}
+
+.history h2 {
+    margin: 10px;
+    background-color: transparent;
+    text-decoration:underline;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: white;
+    padding: 30px;
+}
+#history-list{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    margin: 10px;
+}
+.history ol {
+    list-style-type: none;
+    padding-left: 0;
+}
+.history li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+
+
+
+
+

@@ -1,5 +1,8 @@
 let display = document.getElementById('display');
 let equationSpan = document.getElementById('equation');
+let historyList = document.getElementById('history-list');
+let history = [];
+let clearHistoryButton = document.getElementById('clear-history');
 
 
 function appendToDisplay(value){
@@ -31,7 +34,9 @@ function calculate(){
     try{
         let result = eval(display.value);
         equationSpan.textContent = display.value;
+        history.push(display.value);
         display.value = result;
+        updateHistoryList(); 
     }
     catch(error){
         display.value = 'Error';
@@ -42,7 +47,15 @@ function updateEquation() {
     equationSpan.textContent = display.value;
 }
 
+function updateHistoryList() {
+    historyList.innerHTML = history.map(expr => `<li>${expr}</li>`).join('');
+}
 
+clearHistoryButton.addEventListener('click', clearHistory);
 
-
-
+function clearHistory() {
+    history = [];
+    updateHistoryList();
+    display.value = '';
+    equationSpan.textContent = '';
+}
