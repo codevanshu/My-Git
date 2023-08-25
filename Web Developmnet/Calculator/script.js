@@ -35,6 +35,7 @@ function calculate(){
         let result = eval(display.value);
         equationSpan.textContent = display.value;
         history.push(display.value);
+        history.push(result);
         display.value = result;
         updateHistoryList(); 
     }
