@@ -35,10 +35,10 @@ function calculate(){
         let result = eval(display.value);
         equationSpan.textContent = display.value;
         history.push(display.value);
-        history.push(result);
         display.value = result;
+        history.push(result)
         updateHistoryList(); 
-    }
+    }   
     catch(error){
         display.value = 'Error';
         equationSpan.textContent = '';
@@ -49,7 +49,7 @@ function updateEquation() {
 }
 
 function updateHistoryList() {
-    historyList.innerHTML = history.map(expr => `<li>${expr}</li>`).join('');
+    historyList.innerHTML = history.map(list => `<li>${list}</li>`).join('');
 }
 
 clearHistoryButton.addEventListener('click', clearHistory);
@@ -60,3 +60,15 @@ function clearHistory() {
     display.value = '';
     equationSpan.textContent = '';
 }
+
+function addToInput(expression) {
+    display.value += expression;
+}
+
+historyList.addEventListener('click', function(event) {
+    if (event.target.tagName === 'LI') {
+        let clickedExpression = event.target.textContent;
+        addToInput(clickedExpression);
+    }
+});
+

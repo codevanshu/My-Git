@@ -2,61 +2,62 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculator</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="Title">
-    <h1>Effortless Calculations at Your Fingertips</h1>
-    <p>Introducing Our Innovative Smart Calculator</p>
-  </div>
-  <div class="main">
-    <div class="history">
+    <div class="main">
+        <nav class="navbar">
+            <h2>Calculator</h2>
+        </nav>
+        <div class="Container">
+            <div class="content">
+                <h2>Effortless Calculations at Your Fingertips</h2>
+                <p>Introducing Our Innovative Smart Calculator</p>
+            </div>
 
-      <div class="history-container">
+            <div class="calculator">
+                <div class="calc-content">
+                    <div class="history">
+                        <h4>HISTORY</h4>
+                        <ol id="history-list"></ol>
+                        <button id="clear-history">Clear History</button>
+                    </div>
 
-        <h2>HISTORY</h2>
-        <ol id="history-list"></ol>
-        <button id="clear-history">Clear History</button>
-      </div>
+                    <div class="main-calc">
+                        <span id="equation"></span>
+                        <input id="display" type="text" placeholder="">
+                        <div class="buttons">
+                            <button class="calc-button" onclick="clearAll()" id="button-AC">AC</button>
+                            <button class="calc-button" onclick="Clear()" id="button-C">C</button>
+                            <button class="calc-button" onclick="appendToDisplay('%')" id="button-percent">%</button>
+                            <button class="calc-button" onclick="appendToDisplay('/')" id="button-divide">÷</button>
+                            <button class="calc-button" onclick="appendToDisplay('7')" id="button">7</button>
+                            <button class="calc-button" onclick="appendToDisplay('8')" id="button">8</button>
+                            <button class="calc-button" onclick="appendToDisplay('9')" id="button">9</button>
+                            <button class="calc-button" onclick="appendToDisplay('*')" id="button-x">x</button>
+                            <button class="calc-button" onclick="appendToDisplay('4')" id="button">4</button>
+                            <button class="calc-button" onclick="appendToDisplay('5')" id="button">5</button>
+                            <button class="calc-button" onclick="appendToDisplay('6')" id="button">6</button>
+                            <button class="calc-button" onclick="appendToDisplay('-')" id="button--">-</button>
+                            <button class="calc-button" onclick="appendToDisplay('1')" id="button">1</button>
+                            <button class="calc-button" onclick="appendToDisplay('2')" id="button">2</button>
+                            <button class="calc-button" onclick="appendToDisplay('3')" id="button">3</button>
+                            <button class="calc-button" onclick="appendToDisplay('+')" id="button-add">+</button>
+                            <button class="calc-button" onclick="appendToDisplay('00')" id="button">00</button>
+                            <button class="calc-button" onclick="appendToDisplay('0')" id="button">0</button>
+                            <button class="calc-button" onclick="addDecimalPoint()" id="button">.</button>
+                            <button class="calc-button" onclick="calculate()" id="button-equal">=</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="Calculator">
-
-      <div class="input">
-
-        <span id="equation"></span>
-        <input id="display" type="text" placeholder="">
-      </div>
-      <div class="buttons">
-        <button class="calc-button" onclick="clearAll()" id="button-AC">AC</button>
-        <button class="calc-button" onclick="Clear()" id="button-C">C</button>
-        <button class="calc-button" onclick="appendToDisplay('%')" id="button-percent">%</button>
-        <button class="calc-button" onclick="appendToDisplay('/')" id="button-divide">÷</button>
-        <button class="calc-button" onclick="appendToDisplay('7')" id="button">7</button>
-        <button class="calc-button" onclick="appendToDisplay('8')" id="button">8</button>
-        <button class="calc-button" onclick="appendToDisplay('9')" id="button">9</button>
-        <button class="calc-button" onclick="appendToDisplay('*')" id="button-x">x</button>
-        <button class="calc-button" onclick="appendToDisplay('4')" id="button">4</button>
-        <button class="calc-button" onclick="appendToDisplay('5')" id="button">5</button>
-        <button class="calc-button" onclick="appendToDisplay('6')" id="button">6</button>
-        <button class="calc-button" onclick="appendToDisplay('-')" id="button--">-</button>
-        <button class="calc-button" onclick="appendToDisplay('1')" id="button">1</button>
-        <button class="calc-button" onclick="appendToDisplay('2')" id="button">2</button>
-        <button class="calc-button" onclick="appendToDisplay('3')" id="button">3</button>
-        <button class="calc-button" onclick="appendToDisplay('+')" id="button-add">+</button>
-        <button class="calc-button" onclick="appendToDisplay('00')" id="button">00</button>
-        <button class="calc-button" onclick="appendToDisplay('0')" id="button">0</button>
-        <button class="calc-button" onclick="addDecimalPoint()" id="button">.</button>
-        <button class="calc-button" onclick="calculate()" id="button-equal">=</button>
-
-      </div>
-
-    </div>
-  </div>
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

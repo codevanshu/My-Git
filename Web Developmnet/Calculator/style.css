@@ -1,182 +1,327 @@
-
 *{
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    text-align: center;
-    align-items: center;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
 }
-
-.Title{
-    display: flex;
-    flex-flow: column wrap;
-    align-content: center;
-    justify-content: center;
-    height: 700px;
-    align-items: center;
-
-}
-.Title h1{
-    font-size: 40px ;
-    color: linear-gradient(to left bottom, #051337, #1e0d2c, #260920, #280a16, #250c0c);
-}
-.Title p {
-    font-size: 20px;
-    padding: 20px;
-}
-.main{
-    width: 100%;
+html , body{
     height: 100%;
-    padding: 50px;
+    width: 100%;
+    
+}
+/*main-1*/
+.main{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+/*parent-1 div,nav = navbar*/
+.navbar{
+    height: 100px;
+    width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to left bottom, #051337, #1e0d2c, #260920, #280a16, #250c0c);
+    justify-content: start;
+    padding: 0 3vw;
     
 
 }
-div.Calculator{
-    padding: 20px;
-    box-shadow: 2px 2px 20px 0px rgb(255, 255, 255);
-    border-radius: 0px 20px 20px 0px;
-    display: inline;
+.navbar h2{
+    font-size: 1.5vw;
+}
+
+/*parent-2 div,nav = .Container*/
+.Container{
+    height: calc(100% - 100px);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    color: white;
+    background-image: linear-gradient(to left bottom, #051337, #1e0d2c, #260920, #280a16, #250c0c);
+}
+
+.content{
+    height: 100%;
+    width: 50%;
+    padding: 200px 100px;
+}
+
+/*main-2*/
+.calculator{
+    height: 100%;
+    position: relative;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
    
 }
-span{
-    width: 350px;
-    height: 30px;
-    color: white;
+.calc-content{
+    border-radius: 6%;
+    display: flex;
+    height: 70vh;
+    width: 40vw;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 20px 0px rgb(255, 255, 255);
+}
+.history{
+    height: 90%;
+    margin-left: 30px;
+    width: 40%;
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    background: transparent;
+    grid-template-columns: repeat(1fr);
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    list-style: none;
+    
+    
+}
+.history h4{
+    text-align: center;
+    padding: 5px;
+    font-size: 1.50vw;
+    border-bottom: 1px solid #ccc;
+    
+}
+.history li{
+    list-style: none;
+    text-align: center;
+    font-size: 1vw;
+    line-height: 3vh;
+    border-bottom: 1px solid #ccc;
+    word-wrap:break-word;
+    gap: 10px;
+    cursor: pointer;
+}
+button#clear-history{
+    height: 30px;
+    padding: 5px 4px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-size: 1.85vh;
     color: white;
-    text-align: right;
-    font-size: 20px;
-    margin-left: 10px;
-} 
-input#display:focus {
-    outline: none;
+    font-weight: 700;
+    background-color: rgb(75, 74, 74);
+    box-shadow: 1px 1px 76px 0px rgba(0,0,0,0.75);
+
+}
+.main-calc{
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    gap: 5px;
+}
+
+#equation {
+    border: none;
+    padding: 6px;
+    height: 5vh;
+    font-size: 1vw;
+    justify-content: center;
+    list-style: none;
+    text-align: end;
+    font-weight: 600;
 }
 
 input#display{
-    width: 350px;
-    height: 50px;
-    display: grid;
-    grid-template-columns:1fr;
-    background: transparent;
-    color: white;
-    font-size: 30px;
     border: none;
-    margin-left: 10px;
-    caret-color: transparent;
+    color: black;
+    background-color: transparent;
+    height: 5vh;
+    color: white;
     text-align: end;
+    padding: 5px;
+    caret-color: transparent;
+    font-weight: 600;
     
+
+}
+input:focus {
+    outline: none;
 }
 
-::placeholder{
-    color: rgba(255, 255, 255, 0.556);
-}
-.buttons {
-    align-items: center;
-    padding: 20px;
+.buttons{
+    margin-top: 7px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    width: 450px;
-    height: 500px;
-}
-.calc-button{
-    cursor: pointer;
-    border-radius: 100px;
-    height: 79px;
-    background-color: rgb(75, 74, 74);
-    box-shadow: 1px 1px 76px 0px rgba(0,0,0,0.75);
-    cursor: pointer;
-    font-size: 30px;
-    width: 80px;
-    border: none;
-    color: white;
-    text-align: center;
-}
-button{
-    align-items: center;
-    margin: 3px;
-}
-#button-divide {
-    background-color: #fe9505;
+    gap: 10px; 
 
-}
-#button-x {
-    background-color: #fe9505;
-
-}
-#button-- {
-    background-color: #fe9505;
-
-}
-#button-add {
-    background-color: #fe9505;
-
-}
-#button-equal {
-    background-color: #fe9505;
-
-}
-#button-AC {
-    background-color: rgb(164, 162, 162);
-    color: black;
-
-}
-#button-C {
-    background-color: rgb(164, 162, 162);
-    color: black;
-
-}
-#button-percent {
-    background-color: rgb(164, 162, 162);
-    color: black;
-
-}
-div.history {
-    display:flex ;
-    justify-content: center;
-    align-items: first baseline;
-    width: 200px;
-    height: 88vh;
-    border-radius: 20px 0px 0px 20px;
-    margin: 20px;
-    box-shadow: 2px 2px 20px 0px rgb(255, 255, 255);
     
 }
-
-.history h2 {
-    margin: 10px;
-    background-color: transparent;
-    text-decoration:underline;
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: white;
-    padding: 30px;
-}
-#history-list{
-    color: white;
-    text-decoration: none;
-    text-align: center;
-    margin: 10px;
-}
-.history ol {
-    list-style-type: none;
-    padding-left: 0;
-}
-.history li {
-    padding: 5px 0;
-    border-bottom: 1px solid #ccc;
+button{
+    font-size: 1.50vw;
+    padding: 15px 20px;
+    border-radius: 35px;
+    border: none;
     cursor: pointer;
+    text-align: center;
+    font-weight: 700;
+    color: antiquewhite;
+    background-color: rgb(75, 74, 74);
+    box-shadow: 1px 1px 76px 0px rgba(0,0,0,0.75);
 }
 
 
 
 
 
+/*------------Media queries-----------*/
 
+@media (max-width: 900px) {
+    .main{
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
+    .navbar{
+        width: 100%;
+        height: 60px;
+    }
+    .navbar h2{
+        font-size: 5vw;
+        align-items: center;
+        padding: 0vw 5vw;
+    }
+    .Container{
+        height: calc(100% - 60px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .content{
+        
+        width: 100%;
+        height: 30%;
+        width: 100%;
+        padding: 80px 20px;
+        
+        
+    }
+    .content h2{
+        font-size: 6vw;
+        padding: 0vw 4vw;
+        
+    }
+    .content p{
+        font-size: 3vw;
+        margin-top: 10px;
+        padding: 0vw 4vw;
+    }
+    
+    .calculator{
+        height: 70%;
+        width: 100%;
+    }
+    .calc-content{
+        border-radius: 6%;
+        display: flex;
+        height: 50vh;
+        width: 90vw;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 2px 2px 20px 0px rgb(255, 255, 255);
+    }
+    .history{
+        height: 90%;
+        margin-left: 25px;
+        width: 40%;
+        display: grid;
+        grid-template-columns: repeat(1fr);
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        list-style: none;
+        
+        
+    }
+    .history h4{
+        text-align: center;
+        padding: 5px;
+        font-size: 2.5vw;
+        border-bottom: 0.50px solid #ccc;
+        
+    }
+    .history li{
+        list-style: none;
+        text-align: center;
+        font-size: 3vw;
+        line-height: 3vh;
+        border-bottom: 1px solid #ccc;
+        word-wrap:break-word;
+        gap: 10px;
+        cursor: pointer;
+    }
+    button#clear-history{
+        height: 30px;
+        padding: 6px 5px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        font-size: 1vh;
+        color: white;
+        font-weight: 700;
+        background-color: rgb(75, 74, 74);
+        box-shadow: 1px 1px 76px 0px rgba(0,0,0,0.75);
+    
+    }
+    #equation {
+        border: none;
+        padding: 6px;
+        height: 5vh;
+        font-size: 5vw;
+        justify-content: center;
+        list-style: none;
+        text-align: end;
+        font-weight: 600;
+    }
+    
+    input#display{
+        border: none;
+        color: black;
+        background-color: transparent;
+        height: 5vh;
+        color: white;
+        text-align: end;
+        padding: 5px;
+        caret-color: transparent;
+        font-weight: 600;
+        
+    
+    }
+    input:focus {
+        outline: none;
+    }
+    .buttons{
+        margin-top: 7px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px; 
+    
+        
+    }
+    button{
+        font-size: 4vw;
+        padding: 5px 10px;
+        border-radius: 100px;
+        height: 40px;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        font-weight: 700;
+        color: antiquewhite;
+        background-color: rgb(75, 74, 74);
+        box-shadow: 1px 1px 76px 0px rgba(0,0,0,0.75);
+    }
+    
+
+}
